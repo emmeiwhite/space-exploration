@@ -5,5 +5,5 @@ As Kanye West said:
 > We're living the future so
 > the present is our past.
 
-![GitHub Logo](/assets/mobile-design.png)
+![GitHub Logo](/assets/mobile-first-design.png)
 Format: ![Our Mobile Design](url)
