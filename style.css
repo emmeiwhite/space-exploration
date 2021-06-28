@@ -5,9 +5,6 @@
 }
 
 /* reset */
-html{
-  scroll-behavior: smooth;
-}
 * {
   box-sizing: border-box;
 }
@@ -60,6 +57,10 @@ textarea {
 }
 
 /* fonts */
+@font-face {
+  font-family: "Rubik Regular";
+  src: url("./assets/fonts/Rubik-Regular.ttf");
+}
 
 /* mobile styles */
 
