@@ -13,7 +13,9 @@ ul,
 li,
 a,
 p,
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -24,6 +26,11 @@ li {
 }
 
 /* base styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--secondary);
   overflow-x: hidden;
@@ -89,157 +96,219 @@ h4 {
   font-size: 1.1em;
 }
 /* mobile styles */
-nav,section,footer{
+nav,
+section,
+footer {
   padding: 30px 20px;
 }
 
-.grid{
+.grid {
   display: grid;
-  grid-template-columns: repeat(12,1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: 10px;
 }
 
 /* navigation */
-.site-nav{
+.site-nav {
   padding: 1rem;
 }
 
-.site-nav h1{
+.site-nav h1 {
   grid-column: 1/6;
   border-bottom: 2px solid var(--primary);
   padding-bottom: 0.5rem;
 }
 
-.site-nav ul{
+.site-nav ul {
   display: none;
 }
 
 /* welcome section */
-#welcome{
+#welcome {
   overflow-x: hidden;
 }
-.welcome-text{
-  grid-column: 1/10;
+.welcome-text {
+  grid-column: 1/9;
 }
 
-.leading{
+.leading {
   margin: 2rem 0;
 }
-.welcome-img{
-  grid-column: 10/13;
+.welcome-img {
+  grid-column: 9/13;
 }
 
-.welcome-img img{
-   width: 200%;
+.welcome-img img {
+  width: 200%;
 }
 
 /* portfolio */
-#portfolio{
-  background:url(assets/square_bg.png);
+#portfolio {
+  background: url(assets/square_bg.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#portfolio > h3{
+#portfolio > h3 {
   text-align: center;
 }
 
-.projects a{
+/* projects */
+.projects a {
   grid-column: 1/13;
   margin: 20px 0;
   display: flex;
   align-items: center;
 }
 
-.projects a img{
+.projects a img {
   max-width: 40%;
   margin: 0 20px;
 }
 
-.projects a h4{
+.projects a h4 {
   color: #9994f7;
 }
 
 /* skills */
-#skills{
+#skills {
   background: #07083e;
 }
 
-#skills h3{
+#skills h3 {
   text-align: center;
 }
 
-#skills ul{
+#skills ul {
   margin: 40px 0;
 }
 
-#skills ul li{
+#skills ul li {
   background: rgba(0, 0, 0, 0.2);
   padding: 10px;
   grid-column: span 6;
   text-align: center;
 }
 
-#skills img{
+#skills img {
   height: 80px;
   margin: 10px auto;
 }
 
-
 /* contact form */
 
-#contact h3, #contact p{
+#contact h3,
+#contact p {
   text-align: center;
 }
 
-#contact form{
+#contact form {
   width: 80%;
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
 }
 
-#contact input, #contact textarea{
+#contact input,
+#contact textarea {
   width: 100%;
   margin: 10px auto;
 }
 
-#contact button{
+#contact button {
   background: transparent;
+}
+
+#contact button:hover {
+  color: var(--primary);
 }
 
 /* footer */
 
-footer{
+footer {
   background-color: #14153d;
   background-image: url(./assets/footer_image.png);
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: top center;
 }
-footer .copyright{
+footer .copyright {
   grid-column: 1/6;
   font-size: 0.85em;
 }
 
-footer .social{
+footer .social {
   grid-column: 9/13;
   display: flex;
   justify-content: flex-end;
 }
 
-footer .social img{
+footer .social img {
   width: 50%;
+}
+
+.go-to-top {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 1rem;
 }
 /* small tablet styles */
 @media screen and (min-width: 620px) {
+  .site-nav h1 {
+    grid-column: 1/4;
+  }
+
+  .welcome-img img {
+    width: 100%;
+  }
+
+  .projects {
+    padding: 3rem 0;
+  }
+  .projects a {
+    grid-column: span 6;
+    flex-direction: column;
+  }
+
+  .projects a:last-child {
+    grid-column: 4/10;
+  }
+
+  .projects a img {
+    max-width: 60%;
+  }
+
+  #skills {
+    padding: 3rem 7rem;
+  }
+
+  footer {
+    background-size: 20%;
+  }
 }
 
 /* large tablets and laptop styles */
 @media screen and (min-width: 960px) {
   body {
     font-size: 18px;
+  }
+
+  .grid {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+
+  .site-nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column: -1;
+    column-gap: 2rem;
+    align-self: center;
+  }
+  .welcome-text {
+    align-self: center;
   }
 }
 
