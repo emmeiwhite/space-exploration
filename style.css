@@ -181,7 +181,7 @@ footer {
 }
 
 #skills ul {
-  margin: 40px 0;
+  margin: 40px auto;
 }
 
 #skills ul li {
@@ -189,6 +189,7 @@ footer {
   padding: 10px;
   grid-column: span 6;
   text-align: center;
+  border: 1px solid var(--primary);
 }
 
 #skills img {
@@ -280,7 +281,11 @@ footer .social img {
   }
 
   #skills {
-    padding: 3rem 7rem;
+    padding: 3rem 6rem;
+  }
+
+  #skills ul {
+    gap: 1rem;
   }
 
   footer {
@@ -294,6 +299,9 @@ footer .social img {
     font-size: 18px;
   }
 
+  #welcome {
+    padding-bottom: 3rem;
+  }
   .grid {
     width: 100%;
     max-width: 1060px;
@@ -310,11 +318,59 @@ footer .social img {
   .welcome-text {
     align-self: center;
   }
+
+  .projects a {
+    grid-column: span 4;
+    flex-direction: column;
+  }
+
+  .projects a:last-child {
+    grid-column: 9/13;
+  }
+
+  .projects a:nth-child(2) {
+    padding-top: 140px;
+  }
+
+  .projects a img {
+    max-width: 70%;
+  }
+
+  #skills ul {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  #skills ul li {
+    grid-column: auto;
+  }
+
+  footer {
+    padding: 40px 0;
+    background-size: 25%;
+  }
 }
 
 /* desktop styles */
 @media screen and (min-width: 1200px) {
   body {
     font-size: 20px;
+  }
+
+  section {
+    padding: 6rem 0;
+  }
+
+  .projects a img {
+    max-width: 80%;
+  }
+
+  footer {
+    padding: 60px 0;
+    background-size: 25%;
+  }
+
+  footer img {
+    width: 60%;
   }
 }
