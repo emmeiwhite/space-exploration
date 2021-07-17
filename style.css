@@ -176,7 +176,8 @@ footer {
   background: #07083e;
 }
 
-#skills h3 {
+#skills h3,
+#skills p {
   text-align: center;
 }
 
